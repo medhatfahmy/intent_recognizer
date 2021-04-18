@@ -6,4 +6,5 @@ project(
     DESCRIPTION " Intent recognition program" 
 )
 
+add_subdirectory(tests)
 add_subdirectory(apps)
