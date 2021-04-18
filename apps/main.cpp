@@ -9,7 +9,8 @@ while(1)
     std::cout << "How I can help you " << std::endl ;
     std::getline(std::cin,input_str); 
     std::stringstream ss(input_str) ;
-    Recognizer rec(ss);
+    Recognizer rec;
+    rec.Get_Intent(ss);
 }
 return 0 ;  
 }

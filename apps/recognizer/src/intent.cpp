@@ -4,7 +4,7 @@
 #include<string>
 #include "intent.h"
 
-    Recognizer::Recognizer(std::stringstream &ss)
+    std::string Recognizer::Get_Intent(std::stringstream &ss)
     {
         int dtb_size=5 ; 
         int intent_weather=0;
@@ -34,18 +34,18 @@
         }
         if(intent_weather >= 2 )
         {
-            if((weather_dtb["Paris"] >0) || (weather_dtb["York"] > 0))
-            std::cout<<"Intent: Get Weather City "<< std::endl;
+            if((weather_dtb["Paris"] >0) || (weather_dtb["York"] > 0)|| (weather_dtb["Cairo"] > 0))
+            return "Intent: Get Weather City ";
             else 
-            std::cout<<"Intent: Get Weather"<<std::endl;
+            return "Intent: Get Weather";
         }
         else if(intent_calender >=2 )
         {
-            std::cout<<"Intent: Check calendar"<<std::endl;
+            return "Intent: Check calendar";
         }
         else if(intent_fact >=2)
         {
-            std::cout<<"Intent: Get Fact"<<std::endl ; 
+            return "Intent: Get Fact"; 
         }
-
+return "Intent: Not clear for me";
     }
